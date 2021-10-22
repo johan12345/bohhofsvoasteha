@@ -1,0 +1,18 @@
+- name: Baureihe 420
+  cars_per_unit: 3
+  doors_per_car: 4
+  unit_length: 67.4
+  units_per_train:
+    - 1
+    - 2
+    - 3
+  color: '#ff0421'
+- name: Baureihe 423
+  cars_per_unit: 4
+  doors_per_car: 3
+  unit_length: 67.4
+  units_per_train:
+    - 1
+    - 2
+    - 3
+  color: '#ff0421'

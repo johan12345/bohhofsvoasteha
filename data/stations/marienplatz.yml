@@ -1,0 +1,121 @@
+name: Marienplatz
+platforms:
+    - name: "Gleis 1 (S-Bahn)"
+      lines:
+        - "S1 Leuchtenbergring"
+        - "S2 Erding"
+        - "S3 Holzkirchen"
+        - "S4 Trudering"
+        - "S6 Ebersberg"
+        - "S7 Kreuzstraße"
+        - "S8 Flughafen München"
+      direction: "Richtung Ostbahnhof"
+      length: 210
+      exits:
+        - position: 30
+          type: escalator
+          to_lines:
+            - U3
+            - U6
+        - position: 54
+          type: lift
+          to_destinations:
+            - "Sperrengeschoss"
+          to_lines:
+            - U3
+            - U6
+          opposite_platform: true
+        - position: 56
+          type: stairs
+          to_lines:
+            - U3
+            - U6
+        - position: 56
+          type: escalator
+          to_destinations:
+            - "Sperrengeschoss"
+        - position: 76
+          type: escalator
+          to_destinations:
+            - "Sperrengeschoss"
+        - position: 76
+          type: stairs
+          to_destinations:
+            - "Sperrengeschoss"
+        - position: 76
+          type: escalator
+          to_destinations:
+            - "Sperrengeschoss"
+        - position: 111
+          type: escalator
+          to_lines:
+            - U3
+            - U6
+        - position: 210
+          type: escalator
+          to_destinations:
+            - "Kaufingerstraße"
+      stop_positions:
+        3: 0
+        2: null
+        1: null
+    - name: "Gleis 2 (S-Bahn)"
+      lines:
+        - "S1 Freising/Flughafen München"
+        - "S2 Petershausen/Altomünster"
+        - "S3 Mammendorf"
+        - "S4 Geltendorf"
+        - "S6 Tutzing"
+        - "S7 Wolfratshausen"
+        - "S8 Herrsching"
+      direction: "Richtung Hauptbahnhof"
+      length: 210
+      exits:
+        - position: 0
+          type: escalator
+          to_destinations:
+            - "Kaufingerstraße"
+        - position: 99
+          type: escalator
+          to_lines:
+            - U3
+            - U6
+        - position: 125
+          type: stairs
+          to_lines:
+            - U3
+            - U6
+        - position: 125
+          type: escalator
+          to_destinations:
+            - "Sperrengeschoss"
+        - position: 125
+          type: stairs
+          to_destinations:
+            - "Sperrengeschoss"
+        - position: 140
+          type: escalator
+          to_destinations:
+            - "Sperrengeschoss"
+        - position: 167
+          type: escalator
+          to_destinations:
+            - "Sperrengeschoss"
+        - position: 167
+          type: lift
+          to_destinations:
+            - "Sperrengeschoss"
+          to_lines:
+            - U3
+            - U6
+        - position: 181
+          type: escalator
+          to_lines:
+            - U3
+            - U6
+      stop_positions:
+        3: 0
+        2: null
+        1: null
+          
+          

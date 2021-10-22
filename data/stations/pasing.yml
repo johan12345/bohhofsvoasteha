@@ -1,0 +1,62 @@
+name: Pasing
+platforms:
+    - name: "Gleis 5/6"
+      lines:
+        - "S3 Holzkirchen"
+        - "S4 Trudering"
+        - "S6 Ebersberg"
+        - "S8 Flughafen München"
+      direction: stadteinwärts
+      length: 210
+      exits:
+        - position: 127
+          type: stairs
+          to_destinations:
+            - "Unterführung West"
+        - position: 114
+          type: lift
+          to_destinations:
+            - "Unterführung West"
+        - position: 91
+          type: escalator
+          to_destinations:
+            - "Unterführung West"
+        - position: 42
+          type: stairs
+          to_destinations:
+            - "Unterführung Ost"
+      stop_positions:
+        3: 0
+        2: 22
+        1: 42
+    - name: "Gleis 7/8"
+      lines:
+        - "S3 Mammendorf"
+        - "S4 Geltendorf"
+        - "S6 Tutzing"
+        - "S8 Herrsching"
+      direction: stadtauswärts
+      length: 210
+      exits:
+        - position: 83
+          type: stairs
+          to_destinations:
+            - "Unterführung West"
+        - position: 96
+          type: lift
+          to_destinations:
+            - "Unterführung West"
+        - position: 119
+          type: escalator
+          to_destinations:
+            - "Unterführung West"
+        - position: 168
+          type: stairs
+          to_destinations:
+            - "Unterführung Ost"
+      stop_positions:
+        3: 0
+        2: null
+        1: null
+          
+          
