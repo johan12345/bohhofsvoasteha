@@ -11,6 +11,7 @@ platforms:
         - "S8 Flughafen München"
       direction: "Richtung Ostbahnhof"
       length: 210
+      exit_side: right
       exits:
         - position: 30
           type: escalator
@@ -66,6 +67,7 @@ platforms:
         - "S8 Herrsching"
       direction: "Richtung Hauptbahnhof"
       length: 210
+      exit_side: right
       exits:
         - position: 0
           type: escalator
@@ -104,6 +106,7 @@ platforms:
           to_lines:
             - U3
             - U6
+          opposite_platform: true
         - position: 181
           type: escalator
           to_lines:

@@ -1,14 +1,13 @@
 name: Pasing
 platforms:
-    - name: "Gleis 5/6"
+    - name: "Gleis 5"
       lines:
         - "S3 Holzkirchen"
         - "S4 Trudering"
-        - "S6 Ebersberg"
-        - "S8 Flughafen München"
       direction: stadteinwärts
       length: 210
-      exits:
+      exit_side: left
+      exits: &exits_56
         - position: 127
           type: stairs
           to_destinations:
@@ -25,19 +24,27 @@ platforms:
           type: stairs
           to_destinations:
             - "Unterführung Ost"
-      stop_positions:
+      stop_positions: &stoppositions_56
         3: 0
         2: 22
         1: 42
-    - name: "Gleis 7/8"
+    - name: "Gleis 6"
       lines:
-        - "S3 Mammendorf"
-        - "S4 Geltendorf"
+        - "S6 Ebersberg"
+        - "S8 Flughafen München"
+      direction: stadteinwärts
+      length: 210
+      exit_side: right
+      exits: *exits_56
+      stop_positions: *stoppositions_56
+    - name: "Gleis 7"
+      lines:
         - "S6 Tutzing"
         - "S8 Herrsching"
       direction: stadtauswärts
       length: 210
-      exits:
+      exit_side: right
+      exits: &exits_78
         - position: 83
           type: stairs
           to_destinations:
@@ -54,9 +61,18 @@ platforms:
           type: stairs
           to_destinations:
             - "Unterführung Ost"
-      stop_positions:
+      stop_positions: &stoppositions_78
         3: 0
         2: 58
         1: 67
+    - name: "Gleis 8"
+      lines:
+        - "S3 Mammendorf"
+        - "S4 Geltendorf"
+      direction: stadtauswärts
+      length: 210
+      exit_side: left
+      exits: *exits_78
+      stop_positions: *stoppositions_78
           
           
