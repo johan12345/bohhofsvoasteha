@@ -38,8 +38,7 @@ export default {
     }
   },
   async created() {
-    const response = await fetch("data.json");
-    const data = await response.json();
+    const data = require("./assets/data.json");
     this.stations = data.stations;
     this.trains = data.trains;
   }

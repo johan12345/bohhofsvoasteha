@@ -21,6 +21,6 @@ result = {
     "trains": load_dir(trains_path),
     "stations": load_dir(stations_path)
 }
-outfile = Path('../frontend/public/data.json')
+outfile = Path('../frontend/src/assets/data.json')
 outfile.parent.mkdir(exist_ok=True)
 json.dump(result, open(outfile, 'w'), indent=2)
