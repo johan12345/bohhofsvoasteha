@@ -42,10 +42,6 @@ platforms:
           type: stairs
           to_destinations:
             - "Sperrengeschoss"
-        - position: 76
-          type: escalator
-          to_destinations:
-            - "Sperrengeschoss"
         - position: 111
           type: escalator
           to_lines:
@@ -57,7 +53,7 @@ platforms:
             - "Kaufingerstraße"
       stop_positions:
         3: 0
-        2: null
+        2: 20
         1: null
     - name: "Gleis 2 (S-Bahn)"
       lines:
