@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="car-container">
     <div class="coupler" v-if="isFrontCar" :style="{width: unitsSpacing / 2 * scale + 'px'}"></div>
     <div class="walkway" v-if="!isFrontCar" :style="{width: carSpacing * scale + 'px'}"></div>
     <div class="car" :style="{ width: length * scale + 'px', backgroundColor: train.color }">
@@ -67,8 +67,8 @@ export default {
   }
 }
 </script>
-<style>
-.container {
+<style scoped>
+.car-container {
   height: 60px;
   display: inline-flex;
   align-items: center;

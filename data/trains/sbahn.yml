@@ -1,18 +1,26 @@
 - name: Baureihe 420
+  description: Old S-Bahn trains
   cars_per_unit: 3
   doors_per_car: 4
   unit_length: 67.4
   units_per_train:
-    - 1
-    - 2
-    - 3
+    - units: 1
+      name: Kurzzug
+    - units: 2
+      name: Vollzug
+    - units: 3
+      name: Langzug
   color: '#ff0421'
 - name: Baureihe 423
+  description: New S-Bahn trains (most common)
   cars_per_unit: 4
   doors_per_car: 3
   unit_length: 67.4
   units_per_train:
-    - 1
-    - 2
-    - 3
+    - units: 1
+      name: Kurzzug
+    - units: 2
+      name: Vollzug
+    - units: 3
+      name: Langzug
   color: '#ff0421'

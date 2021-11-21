@@ -2,9 +2,9 @@
   <div class="station_container">
     <div class="direction_indicator"><span class="direction_arrow">☚</span> Fahrtrichtung</div>
     <!-- The train -->
-    <div style="display: flex">
-      <div :style="{width: platform.stop_positions[numCars] * scale + 'px'}"/>
-      <template v-for="unit in numCars">
+    <div class="train_container">
+      <div :style="{width: platform.stop_positions[units] * scale + 'px'}"/>
+      <template v-for="unit in units">
         <car v-for="car in train.cars_per_unit" :train="train" :unit="unit" :car="car" :key="unit * train.cars_per_unit + car" :scale="scale"></car>
       </template>
     </div>
@@ -25,14 +25,17 @@ export default {
       scale: 6,
     }
   },
-  props: ['train', 'platform', 'numCars']
+  props: ['train', 'platform', 'units']
 }
 </script>
-<style>
+<style scoped>
   .station_container {
     position: relative;
     overflow-x: auto;
     overflow-y: hidden;
+  }
+  .train_container {
+    display: flex;
   }
   .exits_container {
     position: relative;

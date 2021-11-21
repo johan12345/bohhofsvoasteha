@@ -1,6 +1,6 @@
 <template>
   <div class="exit" :style="{left: exit.position * scale + 'px'}">
-    <img class="line-signet" v-for="line in exit.to_lines" :key="line" :src="'lines/' +  line + '.svg'"/>
+    <line-signet v-for="line in exit.to_lines" :key="line" :line="line" />
     <span v-if="exit.to_destinations">🚪</span>
     <div class="details">
       <span v-if="exit.to_lines">Linien</span> <span v-for="line in exit.to_lines" :key="line">{{line}} </span><br>
@@ -9,7 +9,9 @@
   </div>
 </template>
 <script>
+import LineSignet from "./LineSignet";
 export default {
+  components: {LineSignet},
   props: [
     'exit',
     'scale'
@@ -18,19 +20,12 @@ export default {
     return {
     }
   },
-  computed: {
-
-  }
 }
 </script>
-<style>
+<style scoped>
 .exit {
   position: absolute;
   width: 20px;
-}
-.line-signet {
-  width: 20px;
-  display: block;
 }
 .exit > .details {
   position: absolute;
